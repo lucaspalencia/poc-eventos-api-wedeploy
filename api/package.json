@@ -28,8 +28,8 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.9.0",
-    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "standard": "^10.0.3"
   }
 }
