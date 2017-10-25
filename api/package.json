@@ -17,8 +17,10 @@
   "author": "Lucas Palencia <lucaspalencia1@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
-    "cors": "^2.8.4"
+    "wedeploy": "^4.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
