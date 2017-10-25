@@ -1,0 +1,6 @@
+[
+    {
+        "path": "/events/*",
+        "data": true
+    }
+]
