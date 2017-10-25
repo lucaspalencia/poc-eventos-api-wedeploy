@@ -27,32 +27,32 @@ exports.find = (req, res) => {
 
 exports.create = (req, res) => {
     db.create('events', req.body)
-	    .then(function(event) {
+        .then(function(event) {
             return res.status(200).json({
                 status: true,
                 data: event
             })
-	    })
-	    .catch(function(error) {
+        })
+        .catch(function(error) {
             return res.status(500).json({
                 status: false,
                 data: {}
             })
-	    })
+        })
 }
 
 exports.update = (req, res) => {
     db.update(`events/${req.params.id}`, req.body)
-	    .then(function() {
+        .then(function() {
             return res.status(200).json({
                 status: true
             })
-	    })
-	    .catch(function(error) {
+        })
+        .catch(function(error) {
             return res.status(500).json({
                 status: false
             })
-	    })
+        })
 }
 
 exports.remove = (req, res) => {
@@ -61,10 +61,10 @@ exports.remove = (req, res) => {
             return res.status(200).json({
                 status: true
             })
-       })
-       .catch(function(error) {
+        })
+        .catch(function(error) {
             return res.status(500).json({
                 status: false
             })
-       })
+        })
 }
