@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
     "start": "npm run build && node dist/index.js",
-    "build": "./node_modules/.bin/babel src -d dist"
+    "build": "./node_modules/.bin/babel src -d dist",
+    "lint": "eslint --ext .js src",
+    "lint-fix": "eslint --fix --ext .js src"
   },
   "keywords": [
     "poc",
@@ -25,6 +27,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "nodemon": "^1.12.1"
   }
 }
