@@ -1,6 +1,72 @@
 [
     {
+        "description": "Returns all events or a specific event if pass /events/:id",
         "path": "/events/*",
+        "method": "GET",
+        "data": true
+    },
+    {
+        "description": "Delete event",
+        "path": "/events/:id",
+        "method": "DELETE",
+        "data": true
+    },
+    {
+        "description": "Create event",
+        "path": "/events/",
+        "method": "POST",
+        "parameters": {
+            "title": {
+                "type": "string",
+                "required": true
+            },
+            "shortdescription": {
+                "type": "string",
+                "required": false
+            },
+            "link": {
+                "type": "string",
+                "required": false
+            },
+            "price": {
+                "type": "number",
+                "required": true
+            },
+            "date": {
+                "type": "object",
+                "required": true
+            },
+            "location": {
+                "type": "object",
+                "required": true
+            }
+        },
+        "data": true
+    },
+    {
+        "description": "Update event",
+        "path": "/events/:id",
+        "method": "PATCH",
+        "parameters": {
+            "title": {
+                "type": "string"
+            },
+            "shortdescription": {
+                "type": "string"
+            },
+            "link": {
+                "type": "string"
+            },
+            "price": {
+                "type": "number"
+            },
+            "date": {
+                "type": "object"
+            },
+            "location": {
+                "type": "object"
+            }
+        },
         "data": true
     }
 ]

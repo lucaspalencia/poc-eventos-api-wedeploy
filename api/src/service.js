@@ -17,10 +17,10 @@ exports.find = (req, res) => {
         data: events
       })
     })
-    .catch(() => {
+    .catch((error) => {
       res.status(500).json({
         status: false,
-        data: {}
+        data: error
       })
     })
 }
@@ -33,24 +33,26 @@ exports.create = (req, res) => {
         data: events
       })
     })
-    .catch(() => {
+    .catch((error) => {
       res.status(500).json({
         status: false,
-        data: {}
+        data: error
       })
     })
 }
 
 exports.update = (req, res) => {
   db.update(`events/${req.params.id}`, req.body)
-    .then(() => {
+    .then((events) => {
       res.status(200).json({
-        status: true
+        status: true,
+        data: events
       })
     })
-    .catch(() => {
+    .catch((error) => {
       res.status(500).json({
-        status: false
+        status: false,
+        data: error
       })
     })
 }
