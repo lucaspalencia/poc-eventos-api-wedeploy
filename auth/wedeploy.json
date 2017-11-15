@@ -1,0 +1,9 @@
+{
+    "id": "auth",
+    "image": "wedeploy/auth",
+    "env": {
+        "WEDEPLOY_AUTH_GITHUB": "true",
+        "WEDEPLOY_AUTH_GITHUB_CLIENT_ID": "<your-github-client-id>",
+        "WEDEPLOY_AUTH_GITHUB_CLIENT_SECRET": "<your-github-client-secret>"
+    }
+}
